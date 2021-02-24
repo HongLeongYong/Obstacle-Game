@@ -9,8 +9,13 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 1f;
     // 連接到遊戲中的Panel,CompleteLevel
     public GameObject completeLevelUI;
+    public GameObject score;
+    public GameObject highscore;
 
-   public void EndGame()
+    public Transform player;
+
+
+    public void EndGame()
     {
         // 當遊戲還沒結束時，呼叫EndGame()，遊戲將會結束（防止遊戲因為死掉而一直呼叫EndGame(),而發生多次EndGame())
         if (gameHasEnded == false)
@@ -32,13 +37,23 @@ public class GameManager : MonoBehaviour
 
         // 直接或許現在Active是哪一個Scene，不用放名字
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if ((int)player.position.z > PlayerPrefs.GetInt("highscore"))
+        {
+            PlayerPrefs.SetInt("highscore", (int)player.position.z);
+        }
+       
     }
 
     // 通關完成的呼叫
     public void CompleteLevel()
     {
+        score.SetActive(false);
+        highscore.SetActive(false);
         // 當呼叫CompleteLevel()，CompleteLevelPanel將被呼叫
-        completeLevelUI.SetActive(true);
+        completeLevelUI.SetActive(true);       
+
+        PlayerPrefs.SetInt("highscore", 0);
+
     }
 
     

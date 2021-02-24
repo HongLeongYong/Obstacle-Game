@@ -13,5 +13,6 @@ public class Score : MonoBehaviour
     {
         // 在Text上顯示目前的分數
         scoreText.text = player.position.z.ToString("0");
+
     }
 }

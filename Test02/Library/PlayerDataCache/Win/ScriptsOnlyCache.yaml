@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - EndTrigger
     - FollowPlayer
     - GameManager
+    - LadderScript
     - LevelComplete
     - Menu
     - MovingObstacleMovement
@@ -12,13 +13,16 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - RotateObstacleMovement
     - Score
+    - highScore
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -60,17 +64,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -137,15 +141,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -214,15 +220,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -291,15 +299,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -368,19 +378,102 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12816}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 32536}
+      Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13698}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Level 05.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11232}
+    - Class: 114
+      Script: {instanceID: 11320}
+    - Class: 114
+      Script: {instanceID: 11324}
+    - Class: 114
+      Script: {instanceID: 11380}
+    - Class: 114
+      Script: {instanceID: 11416}
+    - Class: 114
+      Script: {instanceID: 11456}
+    - Class: 114
+      Script: {instanceID: 11478}
+    - Class: 114
+      Script: {instanceID: 11530}
+    - Class: 114
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 11852}
+    - Class: 114
+      Script: {instanceID: 12308}
+    - Class: 114
+      Script: {instanceID: 12722}
+    - Class: 114
+      Script: {instanceID: 12820}
+    - Class: 114
+      Script: {instanceID: 13074}
+    - Class: 114
+      Script: {instanceID: 13698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -425,15 +518,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12722}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13074}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -637,6 +730,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 62cef9f13a042d4008a8138dfdef088a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotateObstacleMovement
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -647,6 +746,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: d367e7ac8bdda10bf925ff900b60a38e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LadderScript
   - hash:
       serializedVersion: 2
       Hash: 5f170942ee57c7a568f5bcfc7521adea
@@ -823,7 +928,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 754bc6bb73c10426d8afc4344f209e15
+      Hash: f49e9f2d7446182fdb72a4d42a7cabef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -937,10 +1042,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 62cef9f13a042d4008a8138dfdef088a
+      Hash: 261e5f1a68ab70d9af31984cf3ecd1d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RotateObstacleMovement
+    className: highScore
   platform: 5
   scenePathNames:
   - Assets/Scenes/Welcome.unity
@@ -948,5 +1053,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 02.unity
   - Assets/Scenes/Level 03.unity
   - Assets/Scenes/Level 04.unity
+  - Assets/Scenes/Level 05.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/yongh/Desktop/TheFirstGameOfHongLeong.exe
+  playerPath: C:/Users/yongh/Desktop/24022021 Version/TheFirstGameOfHongLeong.exe
