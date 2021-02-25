@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ladderHeight: 3.3
   playerMovement: {fileID: 171318509}
+  jumpSpeed: 0.5
 --- !u!4 &228172764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 162807096570876320, guid: e610168e76d948f40848813bd7067a57,

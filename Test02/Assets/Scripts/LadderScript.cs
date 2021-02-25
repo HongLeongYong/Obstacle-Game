@@ -7,6 +7,7 @@ public class LadderScript : MonoBehaviour
     bool insideLadder;
     public float ladderHeight = 3.3f;
     public PlayerMovement playerMovement;
+    public float jumpSpeed = 1.0f;
     
     
     // Start is called before the first frame update
@@ -38,9 +39,9 @@ public class LadderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (insideLadder && Input.GetKey(KeyCode.W))
+        if (insideLadder && Input.GetKey(KeyCode.UpArrow))
         {
-            this.transform.position += Vector3.up / ladderHeight;
+            this.transform.position += (Vector3.up / ladderHeight) * jumpSpeed;
         }
     }
 }
